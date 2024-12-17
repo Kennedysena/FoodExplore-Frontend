@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+// import { DEVICE_BREAKPOINTS } from "./deviceBreakpoints";
+
 export default createGlobalStyle`
 * {
     margin: 0;
