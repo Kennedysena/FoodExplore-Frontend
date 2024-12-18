@@ -2,27 +2,35 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 46.2rem;
-  width: 30.4rem;
-  padding: 2.4rem 2.4rem;
+  width: 30.2rem;
+  padding: 2.4rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_200};
+  border: 1px solid ${({ theme }) => theme.COLORS.DARK_300};
   border-radius: 0.8rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+
+  position: relative;
+
+  svg {
+    cursor: pointer;
+  }
+
+  > svg {
+    width: 2.4rem;
+    height: 2.2rem;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+  }
 
   > img {
     width: 17.6rem;
-    height: 17.6rem;
-  }
-
-  > span {
-    font-size: 3.2rem;
-    color: ${({ theme }) => theme.COLORS.LIGHT_300};
-    font-weight: bold;
-    margin-top: 1.5rem;
+    cursor: pointer;
   }
 
   > p {
@@ -31,9 +39,9 @@ export const Container = styled.div`
     margin-top: 1.5rem;
   }
 
-  > h4 {
+  > span {
     color: ${({ theme }) => theme.COLORS.CAKE_200};
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin-top: 1.5rem;
   }
 
@@ -56,14 +64,27 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.COLORS.LIGHT_300};
       font-weight: bold;
     }
+  }
+`;
 
-    > button {
-      height: 4.8rem;
-      width: 9.2rem;
-      padding: 1.2rem 2.4rem;
-      background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
-      color: ${({ theme }) => theme.COLORS.LIGHT_100};
-      border-radius: 0.5rem;
-    }
+export const Title = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: ${({ theme }) => theme.COLORS.LIGHT_100};
+
+  > h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 140%;
+  }
+`;
+
+export const Order = styled.div`
+  width: fit-content;
+  flex-direction: row;
+
+  > button {
+    padding: 1.2rem 2.4rem;
   }
 `;

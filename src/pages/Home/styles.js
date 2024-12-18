@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  /* width: 100%; */
+  width: 100%;
 
   display: grid;
   grid-template-rows: 11.4rem auto 7.7rem;
@@ -83,10 +83,18 @@ export const Content = styled.div`
     color: ${({ theme }) => theme.COLORS.GRAY_200};
     margin-bottom: 2.4rem;
   }
+  
+  swiper-container {
+    display: flex;
+    gap: 2.4rem;
+    height: 29.2rem;
+  }
 
+  swiper-slide {
+    max-width: 21rem;
+  }
 
-
- 
+  @media (min-width: 1024px) {
     gap: 4.8rem;
 
     section > h2 {
@@ -99,7 +107,7 @@ export const Content = styled.div`
 
     swiper-container::before,
     swiper-container::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       bottom: 0;
@@ -110,16 +118,25 @@ export const Content = styled.div`
 
     swiper-container::before {
       left: 0;
-      background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, transparent 100%);
+      background: linear-gradient(
+        90deg, 
+        rgba(0, 0, 0, 1) 0%,
+        transparent 100%
+      );
     }
 
     swiper-container::after {
       right: 0;
-      background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 1) 100%);
+      background: linear-gradient(
+        90deg, 
+        transparent 0%,
+        rgba(0, 0, 0, 1) 100%
+      );
     }
 
     swiper-slide {
       max-width: 30.4rem;
     }
-  
+  }
 `;
+

@@ -18,6 +18,9 @@ export default createGlobalStyle`
 
 body {
     background-color: ${({ theme }) => theme.COLORS.DARK_400};
+
+    --swiper-navigation-size: 4rem;
+    --swiper-theme-color: ${({ theme }) => theme.COLORS.LIGHT_100};
 }
 
 body, input, textarea, button {
@@ -25,6 +28,11 @@ body, input, textarea, button {
     border: none;
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
+}
+
+button {
+    background-color: transparent;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
 }
 
 a{

@@ -4,6 +4,7 @@ export const Container = styled.footer`
   height: 7.7rem;
   width: 100%;
   padding: 2.4rem 12.3rem;
+  margin-top: 4.7rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_600};
 
   display: flex;
