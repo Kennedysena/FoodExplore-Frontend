@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
+  grid-area: header;
   height: 10.4rem;
   width: 100%;
   background-color: ${({ theme }) => theme.COLORS.DARK_600};
@@ -9,7 +10,6 @@ export const Container = styled.header`
   justify-content: space-between;
   padding: 2.4rem 12.3rem;
   gap: 3.2rem;
-  margin-bottom: 16.4rem;
 
   > svg {
     height: 3rem;

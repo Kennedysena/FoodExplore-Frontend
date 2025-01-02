@@ -81,10 +81,7 @@ export const Title = styled.div`
 `;
 
 export const Order = styled.div`
-  width: fit-content;
+  display: flex;
   flex-direction: row;
-
-  > button {
-    padding: 1.2rem 2.4rem;
-  }
+  gap: 3.3rem
 `;
