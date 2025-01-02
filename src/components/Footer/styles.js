@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
+  grid-area: footer;
   height: 7.7rem;
   width: 100%;
   padding: 2.4rem 12.3rem;
