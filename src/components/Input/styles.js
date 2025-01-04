@@ -4,24 +4,43 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
+  background-color: ${({ theme }) => theme.COLORS.DARK_900};
 
   > input {
     height: 5.5rem;
-    text-align: center;
-
+    width: 100%;
     padding: 1.2rem 1.4rem;
     color: ${({ theme }) => theme.COLORS.LIGHT_100};
     background: transparent;
-    border: none;
 
     &::placeholder {
       color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
+  }
 
-    &:focus {
-      border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
-    }
+  > svg {
+    margin-left: 16px;
+  }
+
+  > img {
+    margin: 0 2rem 0 0;
+    border: none;
+    background: none;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    margin: 0 2rem 0rem 0;
+    border: none;
+    background: none;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
