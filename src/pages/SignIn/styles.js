@@ -56,7 +56,7 @@ export const Form = styled.form`
       width: 100%;
     }
     
-    p {
+    a {
       color: ${({ theme }) => theme.COLORS.LIGHT_100};
       font-family: "Poppins", sans-serif;
       text-align: center;
