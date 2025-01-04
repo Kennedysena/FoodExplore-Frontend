@@ -1,11 +1,13 @@
 import { Container } from "./styles";
 
 
-export function Section({ title, children}) {
+export function Section({ title, children, marginBottom, theme}) {
   return (
-    <Container>
+    <Container
+      marginBottom={marginBottom}
+      color={theme}>
       <h2>{title}</h2>
-        {children}
+      {children}
     </Container>
   );
 }

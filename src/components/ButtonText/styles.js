@@ -5,9 +5,9 @@ export const Container = styled.button`
   border: none;
 
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
+  font-weight: medium; 
   font-size: 2.4rem;
-  color: ${({ theme }) => theme.COLORS.LIGHT_300};
+  color: ${({ theme }) => theme.COLORS.LIGHT_100};
 
   display: flex;
   align-items: center;
@@ -16,3 +16,4 @@ export const Container = styled.button`
     color: ${({ theme }) => theme.COLORS.LIGHT_300};
   }
 `;
+ 
