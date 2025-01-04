@@ -1,6 +1,7 @@
 import { Container, Form, Brand } from "./styles";
 import { Button } from "../../components/Button";
 import { Section } from "../../components/Section";
+import { Link } from "react-router-dom";
 
 import Logo from "../../assets/food explorer.svg";
 
@@ -22,7 +23,7 @@ export function SignIn() {
         </Section>
 
         <Button title={"Entrar"} />
-        <p>criar uma conta </p>
+        <Link to="/register">criar uma conta</Link>
       </Form>
     </Container>
   );
