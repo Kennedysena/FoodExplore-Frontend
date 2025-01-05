@@ -19,12 +19,11 @@ export const Container = styled.div`
     }
   }
 
-  @media (min-width: 1024px) {
+  
     svg,
     span {
       font-weight: 700;
       font-size: 2rem;
       line-height: 160%;
     }
-  }
-`;
+`; 

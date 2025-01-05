@@ -4,9 +4,8 @@ export const Container = styled.button`
   height: 4.8rem;
   border-radius: 0.5rem;
   font-family: "Poppins", sans-serif;
-  font-weight: medium; 
-  font-size: 1.6rem;
-  background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
+  font-weight: bold; 
+  font-size: 2.4rem;
   color: ${({ theme }) => theme.COLORS.LIGHT_100};
 
   display: flex;

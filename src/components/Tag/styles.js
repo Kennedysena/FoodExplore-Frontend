@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Container = styled.span`
   height: 3.2rem;
-  width: 100%;
+  width: 6.7rem;
   color: ${({ theme }) => theme.COLORS.LIGHT_100};
   background-color: ${({ theme }) => theme.COLORS.DARK_1000};
   font-family: "Poppins", sans-serif;
@@ -12,4 +12,9 @@ export const Container = styled.span`
   border-radius: 0.5rem;
   text-align: center;
   font-weight: 500;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
