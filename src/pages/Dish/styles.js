@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  overflow-y: auto;
 
   display: grid;
   grid-template-rows: 9.6rem auto 7.7rem;
@@ -42,7 +43,7 @@ export const Content = styled.div`
   margin-top: 4.2rem;
 
   > img {
-    max-width: 39rem;
+    width: 39rem;
   }
 
   > div {
