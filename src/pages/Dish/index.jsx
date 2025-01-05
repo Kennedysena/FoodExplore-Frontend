@@ -17,7 +17,7 @@ export function Dish() {
         <div>
           <header>
             <ButtonText >
-              <RxCaretLeft size={44} />
+              <RxCaretLeft size={45} />
              <Link to="/">voltar</Link>
             </ButtonText>
           </header>
