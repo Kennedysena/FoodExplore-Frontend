@@ -7,7 +7,7 @@ export function AppRoutes() {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/dish/:id" element={<Dish />} />
+            <Route path="/dish" element={<Dish />} />
             <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     );
