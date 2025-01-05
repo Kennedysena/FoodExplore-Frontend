@@ -78,10 +78,33 @@ export const Title = styled.div`
     font-weight: 500;
     line-height: 140%;
   }
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+  }
+
+  svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
 `;
 
 export const Order = styled.div`
   display: flex;
   flex-direction: row;
   gap: 3.3rem
+`;
+
+export const Button = styled.button`
+  height: 4.8rem;
+  width: 9.2rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: .5rem;
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
 `;
