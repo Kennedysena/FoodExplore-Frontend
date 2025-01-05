@@ -5,11 +5,11 @@ export function Number() {
   return (
     <Container>
       <button>
-        <FiMinus />
+        <FiMinus size={24}/>
       </button>
-      <span>1</span>
+      <span>01</span>
       <button>
-        <FiPlus />
+        <FiPlus size={24}/>
       </button>
     </Container>
   );

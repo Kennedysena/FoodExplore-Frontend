@@ -18,6 +18,11 @@ export const Container = styled.div`
     > div {
       margin: 3.2rem 12.2rem 15.5rem;
     }
+
+      a {
+        text-decoration: none;
+        color: ${({ theme }) => theme.COLORS.LIGHT_100};
+      }
   }
     .price {
       display: flex;

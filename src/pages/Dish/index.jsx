@@ -7,6 +7,7 @@ import { ButtonText } from "../../components/ButtonText";
 import { Container, Content } from "./styles";
 import Ravanello from "../../assets/Ravanello.svg";
 import { RxCaretLeft } from "react-icons/rx";
+import { Link } from "react-router-dom";
 
 export function Dish() {
   return (
@@ -15,9 +16,9 @@ export function Dish() {
       <main>
         <div>
           <header>
-            <ButtonText>
+            <ButtonText >
               <RxCaretLeft size={44} />
-              voltar
+             <Link to="/">voltar</Link>
             </ButtonText>
           </header>
 
