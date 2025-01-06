@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   height: 46.2rem;
-  width: 30.2rem;
+  width: 30.4rem;
   padding: 2.4rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_200};
   border: 1px solid ${({ theme }) => theme.COLORS.DARK_300};
@@ -28,18 +29,17 @@ export const Container = styled.div`
     right: 1.6rem;
   }
 
-  > img {
-    width: 17.6rem;
-    cursor: pointer;
-  }
-
   > p {
-    font-size: 1.5rem;
+    height: 25.6rem;
+    width: 25.6rem;
+    font-size: 1.4rem;
     color: ${({ theme }) => theme.COLORS.LIGHT_400};
     margin-top: 1.5rem;
+    text-align: center;
   }
 
   > span {
+    height: 5.2rem;
     color: ${({ theme }) => theme.COLORS.CAKE_200};
     font-size: 3.2rem;
     margin-top: 1.5rem;
@@ -67,41 +67,48 @@ export const Container = styled.div`
   }
 `;
 
-export const Title = styled.div`
-  width: 100%;
+export const Brand = styled(Link)`
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  > img {
+    width: 17.6rem;
+    cursor: pointer;
+  }
+`;
+
+export const Title = styled(Link)`
+  margin-top: 1.5rem;
   color: ${({ theme }) => theme.COLORS.LIGHT_100};
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   > h2 {
     font-size: 2.4rem;
     font-weight: 500;
     line-height: 140%;
   }
-  a {
+  > a {
     text-decoration: none;
     color: ${({ theme }) => theme.COLORS.LIGHT_100};
-  }
-
-  svg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
   }
 `;
 
 export const Order = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 3.3rem
+  gap: 3.3rem;
 `;
 
 export const Button = styled.button`
   height: 4.8rem;
   width: 9.2rem;
   padding: 1.2rem 2.4rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   font-size: 1.4rem;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
