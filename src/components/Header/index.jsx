@@ -4,8 +4,6 @@ import { FiLogOut } from "react-icons/fi";
 import { Search } from "../Search";
 import { TbReceipt } from "react-icons/tb";
 
-// import Sair from "../../assets/SignOut.svg"
-
 export function Header() {
   return (
     <Container>
