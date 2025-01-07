@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.header`
   grid-area: header;
@@ -31,7 +32,7 @@ export const Container = styled.header`
     width: 2.4rem;
   }
 `;
-export const PedidosButton = styled.button`
+export const PedidosButton = styled(Link)`
   height: 5.6rem;
   width: 21.6rem;
   padding: 1.2rem 3.2rem;
