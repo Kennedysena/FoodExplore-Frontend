@@ -4,6 +4,7 @@ import { FiLogOut } from "react-icons/fi";
 import { Search } from "../Search";
 import { TbReceipt } from "react-icons/tb";
 
+
 export function Header() {
   return (
     <Container>
@@ -11,7 +12,7 @@ export function Header() {
         <img src={Logo} alt="logo" />
       </Brand>
       <Search />
-      <PedidosButton>
+      <PedidosButton to="/payment">
         <TbReceipt size={24} />
         Pedidos (0)
       </PedidosButton>
