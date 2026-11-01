@@ -25,7 +25,8 @@ jobs:
           cache: yarn
       - run: yarn install --immutable
       - run: yarn lint
-      - run: yarn tsc --noEmit
+      # next typegen gera o next-env.d.ts (tipos de .svg etc.), que não fica no git
+      - run: yarn typecheck
 
   deploy:
     name: Build (${{ github.ref_name }})
