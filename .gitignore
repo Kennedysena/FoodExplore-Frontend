@@ -11,6 +11,11 @@ node_modules
 .env
 dist
 dist-ssr
+
+# Next.js
+.next
+out
+*.tsbuildinfo
 *.local
 
 # Editor directories and files

@@ -1,0 +1,48 @@
+name: CI / Deploy
+
+# develop -> development | testing -> testing | production -> production
+on:
+  pull_request:
+    branches: [develop, testing, production]
+  push:
+    branches: [develop, testing, production]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: Lint e tipos
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Yarn 4 vem do Corepack; precisa estar ativo antes do cache do setup-node
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: yarn
+      - run: yarn install --immutable
+      - run: yarn lint
+      - run: yarn tsc --noEmit
+
+  deploy:
+    name: Build (${{ github.ref_name }})
+    if: github.event_name == 'push'
+    needs: ci
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref_name == 'production' && 'production' || github.ref_name == 'testing' && 'testing' || 'development' }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: yarn
+      - run: yarn install --immutable
+      # Variáveis NEXT_PUBLIC_* entram no bundle no build, por isso o build é por ambiente
+      - run: yarn build
+        env:
+          NEXT_PUBLIC_API_URL: ${{ vars.NEXT_PUBLIC_API_URL }}
+      # TODO: passo de deploy do provedor escolhido (Vercel, Netlify, VPS...)

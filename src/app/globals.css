@@ -1,0 +1,182 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Paleta do Food Explorer (antigo src/styles/theme.js) */
+@theme {
+  --color-light-100: #ffffff;
+  --color-light-200: #fffaf1;
+  --color-light-300: #e1e1e6;
+  --color-light-400: #c4c4cc;
+  --color-light-500: #7c7c8a;
+  --color-light-600: #76797b;
+  --color-light-700: #4d585e;
+
+  --color-dark-100: #000405;
+  --color-dark-200: #00070a;
+  --color-dark-300: #000204;
+  --color-dark-400: #000a0f;
+  --color-dark-500: #000c12;
+  --color-dark-600: #00111a;
+  --color-dark-700: #001119;
+  --color-dark-800: #0d161b;
+  --color-dark-900: #0d1d25;
+  --color-dark-1000: #192227;
+
+  --color-gradient-100: #091e26;
+  --color-gradient-200: #00131c;
+
+  --color-tomato-100: #750310;
+  --color-tomato-200: #92000e;
+  --color-tomato-300: #ab222e;
+  --color-tomato-400: #ab4d55;
+
+  --color-carrot-100: #fba94c;
+  --color-mint-100: #04d361;
+  --color-mint-300: #065e7c;
+  --color-cake-200: #82f3ff;
+
+  /* Tamanhos de título do layout (32px e 40px), fora da escala padrão */
+  --text-heading: 2rem;
+  --text-hero: 2.5rem;
+}
+
+/* Tokens do shadcn/ui (+ alguns do app) mapeados para a paleta; valores em :root (claro) e .dark */
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-title: var(--title);
+  --color-price: var(--price);
+  --color-hero-from: var(--hero-from);
+  --color-hero-to: var(--hero-to);
+
+  --font-sans: var(--font-roboto), sans-serif;
+  --font-display: var(--font-poppins), sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+}
+
+/* Tema claro */
+:root {
+  --radius: 0.3125rem;
+
+  --background: var(--color-light-200);
+  --foreground: var(--color-dark-600);
+  --card: var(--color-light-100);
+  --card-foreground: var(--color-dark-600);
+  --popover: var(--color-light-100);
+  --popover-foreground: var(--color-dark-600);
+  --primary: var(--color-tomato-100);
+  --primary-foreground: var(--color-light-100);
+  --secondary: var(--color-light-300);
+  --secondary-foreground: var(--color-dark-600);
+  --muted: var(--color-light-300);
+  --muted-foreground: var(--color-light-700);
+  --accent: var(--color-light-300);
+  --accent-foreground: var(--color-dark-600);
+  --destructive: var(--color-tomato-300);
+  --border: var(--color-light-300);
+  --input: var(--color-light-400);
+  --ring: var(--color-light-600);
+
+  --surface: var(--color-light-100);
+  --surface-foreground: var(--color-dark-600);
+  --title: var(--color-dark-900);
+  --price: var(--color-mint-300);
+  --hero-from: #e3eef2;
+  --hero-to: #cfe0e7;
+
+  --sidebar: var(--color-light-100);
+  --sidebar-foreground: var(--color-dark-900);
+  --sidebar-primary: var(--color-tomato-100);
+  --sidebar-primary-foreground: var(--color-light-100);
+  --sidebar-accent: var(--color-light-300);
+  --sidebar-accent-foreground: var(--color-dark-600);
+  --sidebar-border: var(--color-light-300);
+  --sidebar-ring: var(--color-light-600);
+}
+
+/* Tema escuro (o visual original do Food Explorer) */
+.dark {
+  --background: var(--color-dark-400);
+  --foreground: var(--color-light-100);
+  --card: var(--color-dark-200);
+  --card-foreground: var(--color-light-100);
+  --popover: var(--color-dark-600);
+  --popover-foreground: var(--color-light-100);
+  --primary: var(--color-tomato-100);
+  --primary-foreground: var(--color-light-100);
+  --secondary: var(--color-dark-1000);
+  --secondary-foreground: var(--color-light-100);
+  --muted: var(--color-dark-900);
+  --muted-foreground: var(--color-light-400);
+  --accent: var(--color-dark-1000);
+  --accent-foreground: var(--color-light-100);
+  --destructive: var(--color-tomato-300);
+  --border: var(--color-dark-300);
+  --input: var(--color-dark-900);
+  --ring: var(--color-light-600);
+
+  --surface: var(--color-dark-600);
+  --surface-foreground: var(--color-light-100);
+  --title: var(--color-light-300);
+  --price: var(--color-cake-200);
+  --hero-from: var(--color-gradient-100);
+  --hero-to: var(--color-gradient-200);
+
+  --sidebar: var(--color-dark-600);
+  --sidebar-foreground: var(--color-light-300);
+  --sidebar-primary: var(--color-tomato-100);
+  --sidebar-primary-foreground: var(--color-light-100);
+  --sidebar-accent: var(--color-dark-1000);
+  --sidebar-accent-foreground: var(--color-light-100);
+  --sidebar-border: var(--color-dark-900);
+  --sidebar-ring: var(--color-light-600);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  /* O preflight do Tailwind 4 usa cursor: default em botões */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
